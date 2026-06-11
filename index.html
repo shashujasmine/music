@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrooveHub - Modern Music Streaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-compact-disc"></i>
+                <span>GrooveHub</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#search" class="nav-link">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </a>
+                <a href="#library" class="nav-link">
+                    <i class="fas fa-music"></i>
+                    <span>Library</span>
+                </a>
+                <a href="#favorites" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                    <span>Liked</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>&copy; 2026 GrooveHub</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-top">
+                    <h1 id="page-title">Welcome Back</h1>
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-bar" 
+                        placeholder="Search songs, artists, playlists..."
+                    >
+                    <button id="clear-search" class="clear-btn" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Content Sections -->
+            <div class="content">
+                <!-- Trending Section -->
+                <section class="section" id="trending-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-fire"></i> Trending Now
+                    </h2>
+                    <div class="playlists-grid" id="trending-playlists">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Recommended Songs -->
+                <section class="section" id="recommended-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-star"></i> Recommended For You
+                    </h2>
+                    <div class="songs-list" id="recommended-songs">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Search Results (Hidden by default) -->
+                <section class="section" id="search-results-section" style="display: none;">
+                    <h2 class="section-title">Search Results</h2>
+                    <div class="search-results" id="search-results">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Favorites Section (Hidden by default) -->
+                <section class="section" id="favorites-section" style="display: none;">
+                    <h2 class="section-title">
+                        <i class="fas fa-heart"></i> Your Liked Songs
+                    </h2>
+                    <div class="songs-list" id="favorites-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <div class="player-container">
+            <div class="player-info">
+                <div class="player-album-art">
+                    <img id="player-album" src="https://via.placeholder.com/56x56?text=Album" alt="Album Art">
+                </div>
+                <div class="player-details">
+                    <div class="player-song-name" id="player-song">No Song Selected</div>
+                    <div class="player-artist-name" id="player-artist">No Artist</div>
+                </div>
+            </div>
+
+            <div class="player-controls">
+                <button class="player-btn" id="shuffle-btn" title="Shuffle">
+                    <i class="fas fa-random"></i>
+                </button>
+                <button class="player-btn" id="prev-btn" title="Previous">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="player-btn play-btn" id="play-btn" title="Play">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="player-btn" id="next-btn" title="Next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                <button class="player-btn" id="repeat-btn" title="Repeat">
+                    <i class="fas fa-redo"></i>
+                </button>
+            </div>
+
+            <div class="player-progress">
+                <span class="time" id="current-time">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                    <input 
+                        type="range" 
+                        id="progress-slider" 
+                        class="progress-slider" 
+                        min="0" 
+                        max="100" 
+                        value="0"
+                    >
+                </div>
+                <span class="time" id="duration">0:00</span>
+            </div>
+
+            <div class="player-extras">
+                <button class="player-btn" id="like-btn" title="Add to Liked">
+                    <i class="far fa-heart"></i>
+                </button>
+                <button class="player-btn" id="volume-btn" title="Volume">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <input 
+                    type="range" 
+                    id="volume-slider" 
+                    class="volume-slider" 
+                    min="0" 
+                    max="100" 
+                    value="70"
+                >
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="audio-player"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
