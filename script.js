@@ -1,55 +1,110 @@
 
 const songs = [
-    { title: "Arabic Kuthu", artist: "Anirudh Ravichander", src: "music/song1.mp3" },
-    { title: "Vaathi Coming", artist: "Anirudh Ravichander", src: "music/song2.mp3" },
-    { title: "Hukum", artist: "Anirudh Ravichander", src: "music/song3.mp3" },
-    { title: "Naan Ready", artist: "Anirudh Ravichander", src: "music/song4.mp3" },
-    { title: "Aaya Sher", artist: "Anirudh Ravichander", src: "music/aaya-sher.m4a" }
+    { 
+        title: "Aaya Sher", 
+        artist: "Anirudh Ravichander", 
+        src: "music/aaya-sher.m4a",
+        image: "https://i.scdn.co/image/ab67616d00001e0248be563b0c9f1d7985a7c608", // Lion cover from Spotify
+        duration: "3:15",
+        durationSeconds: 195,
+        genre: "Energetic",
+        plays: "1.2M"
+    },
+    { 
+        title: "Ava Enna", 
+        artist: "Harris Jayaraj", 
+        src: "music/Ava Enna.mp3",
+        image: "https://c.saavncdn.com/029/Vaaranam-Aayiram-2008-500x500.jpg",
+        duration: "5:18",
+        durationSeconds: 318,
+        genre: "Melody",
+        plays: "25M"
+    },
+    { 
+        title: "Dheera Dheera", 
+        artist: "Ravi Basrur", 
+        src: "music/Dheera Dheera.mp3",
+        image: "https://pendujatt.com.se/uploads/album/kgf-chapter-1-malayalam-ravi-basrur.webp",
+        duration: "3:52",
+        durationSeconds: 232,
+        genre: "Epic",
+        plays: "150M"
+    },
+    { 
+        title: "Shape of You", 
+        artist: "Ed Sheeran", 
+        src: "music/Shape of You.mp3",
+        image: "https://wallpapercave.com/wp/wp3537465.jpg",
+        duration: "3:53",
+        durationSeconds: 233,
+        genre: "Pop",
+        plays: "3.4B"
+    },
+    { 
+        title: "Arabic Kuthu (Halamithi Habibo)", 
+        artist: "Anirudh Ravichander & Jonita Gandhi", 
+        src: "music/song1.mp3",
+        image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&h=200&fit=crop", // Party Dance
+        duration: "4:40",
+        durationSeconds: 280,
+        genre: "Kuthu",
+        plays: "450M"
+    },
+    { 
+        title: "Vaathi Coming", 
+        artist: "Anirudh Ravichander", 
+        src: "music/song2.mp3",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=200&h=200&fit=crop", // Dancing Crowd
+        duration: "3:48",
+        durationSeconds: 228,
+        genre: "Dance",
+        plays: "320M"
+    },
+    { 
+        title: "Hukum - Thalaivar Alappara", 
+        artist: "Anirudh Ravichander", 
+        src: "music/song3.mp3",
+        image: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200&h=200&fit=crop", // Audio setup
+        duration: "3:27",
+        durationSeconds: 207,
+        genre: "Mass",
+        plays: "180M"
+    },
+    { 
+        title: "Naan Ready (From Leo)", 
+        artist: "Anirudh Ravichander & Thalapathy Vijay", 
+        src: "music/song4.mp3",
+        image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=200&h=200&fit=crop", // Stadium
+        duration: "4:07",
+        durationSeconds: 247,
+        genre: "Kuthu",
+        plays: "210M"
+    },
+    { 
+        title: "Blinding Lights", 
+        artist: "The Weeknd", 
+        src: "music/blinding-lights.mp3",
+        image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=200&h=200&fit=crop", // Neon Lights
+        duration: "3:20",
+        durationSeconds: 200,
+        genre: "Synthwave",
+        plays: "4.1B"
+    }
 ];
-
 
 const SONGS_DATA = songs.map((song, index) => ({
     id: index + 1,
     name: song.title,
     artist: song.artist,
-    duration: '3:45',
-    durationSeconds: 225,
-    image: 'https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=200&h=200&fit=crop',
+    duration: song.duration,
+    durationSeconds: song.durationSeconds,
+    image: song.image,
     src: song.src,
-    genre: 'Tamil',
-    plays: 1000 + (index * 100)
+    genre: song.genre,
+    plays: song.plays
 }));
 
-const PLAYLISTS_DATA = [
-    {
-        id: 1,
-        name: 'Global Hits',
-        description: 'Popular songs from around the world',
-        image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&h=200&fit=crop',
-        songs: [1, 2, 3, 4]
-    },
-    {
-        id: 2,
-        name: 'Pop Favorites',
-        description: 'Your favorite pop tracks',
-        image: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200&h=200&fit=crop',
-        songs: [1, 3]
-    },
-    {
-        id: 3,
-        name: 'International Mix',
-        description: 'Music from different cultures',
-        image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=200&h=200&fit=crop',
-        songs: [2, 3, 4]
-    },
-    {
-        id: 4,
-        name: 'Latest Releases',
-        description: 'New and trending songs',
-        image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=200&h=200&fit=crop',
-        songs: [1, 2, 3, 4]
-    },
-];
+
 
 
 const audioPlayer = document.getElementById('audio-player');
@@ -71,7 +126,7 @@ const playerAlbumImg = document.getElementById('player-album');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
 
-const trendingPlaylistsContainer = document.getElementById('trending-playlists');
+
 const recommendedSongsContainer = document.getElementById('recommended-songs');
 const pageTitle = document.getElementById('page-title');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -93,7 +148,6 @@ let currentPlaylist = SONGS_DATA;
 document.addEventListener('DOMContentLoaded', () => {
     initializeApp();
     setupEventListeners();
-    renderTrendingPlaylists();
     renderRecommendedSongs();
     updatePlayerDisplay();
 });
@@ -114,6 +168,7 @@ function setupEventListeners() {
     
     audioPlayer.addEventListener('timeupdate', updateProgress);
     audioPlayer.addEventListener('ended', handleSongEnd);
+    audioPlayer.addEventListener('error', handleAudioError);
     
     progressSlider.addEventListener('input', seekAudio);
     volumeSlider.addEventListener('input', adjustVolume);
@@ -129,6 +184,17 @@ function setupEventListeners() {
     });
 }
 
+function handleAudioError() {
+    console.warn("Audio file not found or failed to load. Falling back to Aaya Sher.");
+    const currentSrc = audioPlayer.src;
+    if (!currentSrc.includes('aaya-sher.m4a')) {
+        audioPlayer.src = 'music/aaya-sher.m4a';
+        if (isPlaying) {
+            audioPlayer.play().catch(err => console.log("Playback failed on fallback: ", err));
+        }
+    }
+}
+
 
 function handleNavigation(target) {
     navLinks.forEach(link => link.classList.remove('active'));
@@ -136,7 +202,7 @@ function handleNavigation(target) {
     
     searchResultsSection.style.display = 'none';
     favoriteSection.style.display = 'none';
-    document.getElementById('trending-section').style.display = 'block';
+    document.getElementById('hero-section').style.display = 'grid';
     document.getElementById('recommended-section').style.display = 'block';
     
     if (target === '#search') {
@@ -147,7 +213,7 @@ function handleNavigation(target) {
     } else if (target === '#favorites') {
         pageTitle.textContent = 'Your Liked Songs';
         searchResultsSection.style.display = 'none';
-        document.getElementById('trending-section').style.display = 'none';
+        document.getElementById('hero-section').style.display = 'none';
         document.getElementById('recommended-section').style.display = 'none';
         favoriteSection.style.display = 'block';
         renderFavorites();
@@ -163,13 +229,13 @@ function handleSearch(e) {
     if (query.length === 0) {
         clearSearchBtn.style.display = 'none';
         searchResultsSection.style.display = 'none';
-        document.getElementById('trending-section').style.display = 'block';
+        document.getElementById('hero-section').style.display = 'grid';
         document.getElementById('recommended-section').style.display = 'block';
         return;
     }
     
     clearSearchBtn.style.display = 'block';
-    document.getElementById('trending-section').style.display = 'none';
+    document.getElementById('hero-section').style.display = 'none';
     document.getElementById('recommended-section').style.display = 'none';
     
     const results = SONGS_DATA.filter(song => 
@@ -186,26 +252,12 @@ function clearSearch() {
     searchInput.value = '';
     clearSearchBtn.style.display = 'none';
     searchResultsSection.style.display = 'none';
-    document.getElementById('trending-section').style.display = 'block';
+    document.getElementById('hero-section').style.display = 'grid';
     document.getElementById('recommended-section').style.display = 'block';
 }
 
 
-function renderTrendingPlaylists() {
-    trendingPlaylistsContainer.innerHTML = PLAYLISTS_DATA.map(playlist => `
-        <div class="playlist-card" onclick="playPlaylist(${playlist.id})">
-            <img src="${playlist.image}" alt="${playlist.name}" class="playlist-image">
-            <div class="playlist-info">
-                <div class="playlist-name">${playlist.name}</div>
-                <div class="playlist-description">${playlist.description}</div>
-                <div class="playlist-meta">${playlist.songs.length} songs</div>
-            </div>
-            <button class="playlist-action" onclick="event.stopPropagation(); playPlaylist(${playlist.id})">
-                <i class="fas fa-play"></i>
-            </button>
-        </div>
-    `).join('');
-}
+
 
 function renderRecommendedSongs() {
     recommendedSongsContainer.innerHTML = SONGS_DATA.map(song => createSongElement(song)).join('');
@@ -387,13 +439,7 @@ function handleSongEnd() {
     }
 }
 
-function playPlaylist(playlistId) {
-    const playlist = PLAYLISTS_DATA.find(p => p.id === playlistId);
-    if (playlist && playlist.songs.length > 0) {
-        loadSong(playlist.songs[0]);
-        togglePlay();
-    }
-}
+
 
 
 function seekAudio(e) {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Sidebar Navigation -->
@@ -15,7 +17,7 @@
                 <i class="fas fa-compact-disc"></i>
                 <span>GrooveHub</span>
             </div>
-            
+
             <nav class="nav-menu">
                 <a href="#home" class="nav-link active">
                     <i class="fas fa-home"></i>
@@ -54,12 +56,8 @@
                 <!-- Search Bar -->
                 <div class="search-container">
                     <i class="fas fa-search"></i>
-                    <input 
-                        type="text" 
-                        id="search-input" 
-                        class="search-bar" 
-                        placeholder="Search songs, artists, playlists..."
-                    >
+                    <input type="text" id="search-input" class="search-bar"
+                        placeholder="Search songs, artists, playlists...">
                     <button id="clear-search" class="clear-btn" style="display: none;">
                         <i class="fas fa-times"></i>
                     </button>
@@ -68,45 +66,127 @@
 
             <!-- Content Sections -->
             <div class="content">
-                <!-- Trending Section -->
-                <section class="section" id="trending-section">
-                    <h2 class="section-title">
-                        <i class="fas fa-fire"></i> Trending Now
-                    </h2>
-                    <div class="playlists-grid" id="trending-playlists">
-                        <!-- Populated by JavaScript -->
+                <!-- Hero Section -->
+                <div class="featured-grid" id="hero-section">
+                    <!-- Featured Card 1 (Aaya Sher) -->
+                    <div class="hero-banner featured-card-1">
+                        <div class="hero-content">
+                            <span class="hero-badge"><i class="fas fa-fire"></i> Trending #1</span>
+                            <h1 class="hero-title">Aaya Sher</h1>
+                            <h2 class=" hero-title">The Paradise</h2>
+                            <p class="hero-artist">Anirudh Ravichander</p>
+                            <p class="hero-description">The ultimate high-energy mass anthem. Turn up the bass!</p>
+                            <div class="hero-buttons">
+                                <button class="hero-btn play-btn-hero" onclick="loadSong(1); togglePlay();">
+                                    <i class="fas fa-play"></i> Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <img src="https://i.scdn.co/image/ab67616d00001e0248be563b0c9f1d7985a7c608"
+                                alt="Aaya Sher Cover" class="hero-cover">
+                        </div>
                     </div>
-                </section>
 
-                <!-- Recommended Songs -->
-                <section class="section" id="recommended-section">
-                    <h2 class="section-title">
-                        <i class="fas fa-star"></i> Recommended For You
-                    </h2>
-                    <div class="songs-list" id="recommended-songs">
-                        <!-- Populated by JavaScript -->
+                    <!-- Featured Card 2 (Shape of You) -->
+                    <div class="hero-banner featured-card-2">
+                        <div class="hero-content">
+                            <span class="hero-badge badge-blue"><i class="fas fa-music"></i> Global Hit</span>
+                            <h1 class="hero-title">Shape of You</h1>
+                            <h2 class="hero-title">Castle on the Hill</h2>
+                            <p class="hero-artist">Ed Sheeran</p>
+                            <p class="hero-description">Experience the record-breaking global pop sensation. Play now!
+                            </p>
+                            <div class="hero-buttons">
+                                <button class="hero-btn play-btn-hero" onclick="loadSong(4); togglePlay();">
+                                    <i class="fas fa-play"></i> Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <img src="https://wallpapercave.com/wp/wp3537465.jpg" alt="Shape of You Cover"
+                                class="hero-cover">
+                        </div>
                     </div>
-                </section>
 
-                <!-- Search Results (Hidden by default) -->
-                <section class="section" id="search-results-section" style="display: none;">
-                    <h2 class="section-title">Search Results</h2>
-                    <div class="search-results" id="search-results">
-                        <!-- Populated by JavaScript -->
+                    <div class="hero-banner featured-card-2">
+                        <div class="hero-content">
+                            <span class="hero-badge badge-blue"><i class="fas fa-music"></i>World-Wide-Web</span>
+                            <h1 class="hero-title">Dheera Dheera</h1>
+                            <h2 class="hero-title">KGF Chapter-1</h2>
+                            <h2 class="hero-title">Hombale Films</h2>
+                            <p class="hero-artist">Ravi Basrur</p>
+                            <p class="hero-description">"Dheera Dheera" is one of the most popular songs from the movie
+                                KGF: Chapter 1. The song highlights the strength, courage, and rising legend of Rocky,
+                                played by Yash. It has a powerful folk-orchestral style that matches the film's grand
+                                and intense atmosphere.
+                            </p>
+                            <div class="hero-buttons">
+                                <button class="hero-btn play-btn-hero" onclick="loadSong(3); togglePlay();">
+                                    <i class="fas fa-play"></i> Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <img src="https://pendujatt.com.se/uploads/album/kgf-chapter-1-malayalam-ravi-basrur.webp"
+                                alt="Dheera Dheera cover" class="hero-cover">
+                        </div>
                     </div>
-                </section>
 
-                <!-- Favorites Section (Hidden by default) -->
-                <section class="section" id="favorites-section" style="display: none;">
-                    <h2 class="section-title">
-                        <i class="fas fa-heart"></i> Your Liked Songs
-                    </h2>
-                    <div class="songs-list" id="favorites-list">
-                        <!-- Populated by JavaScript -->
+                    <!-- Featured Card 4 (Ava enna) -->
+                    <div class="hero-banner featured-card-3">
+                        <div class="hero-content">
+                            <span class="hero-badge badge-orange"><i class="fas fa-music"></i> Tamil Hit</span>
+                            <h1 class="hero-title">Ava enna</h1>
+                            <h2 class="hero-title">Vaaranam Aayiram</h2>
+                            <p class="hero-artist">Harris Jayaraj</p>
+                            <p class="hero-description">"Ava Enna Enna Thedi Vantha Anjala" is a soulful Tamil track from
+                                the 2008 film Vaaranam Aayiram, composed by Harris Jayaraj with lyrics by Thamarai and sung
+                                by Karthik.</p>
+                            <div class="hero-buttons">
+                                <button class="hero-btn play-btn-hero" onclick="loadSong(2); togglePlay();">
+                                    <i class="fas fa-play"></i> Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <img src="https://c.saavncdn.com/029/Vaaranam-Aayiram-2008-500x500.jpg" alt="Ava enna cover"
+                                class="hero-cover">
+                        </div>
                     </div>
-                </section>
+                </div>
             </div>
-        </main>
+
+
+            <!-- Recommended Songs -->
+            <section class="section" id="recommended-section">
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i> Recommended For You
+                </h2>
+                <div class="songs-list" id="recommended-songs">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Search Results (Hidden by default) -->
+            <section class="section" id="search-results-section" style="display: none;">
+                <h2 class="section-title">Search Results</h2>
+                <div class="search-results" id="search-results">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Favorites Section (Hidden by default) -->
+            <section class="section" id="favorites-section" style="display: none;">
+                <h2 class="section-title">
+                    <i class="fas fa-heart"></i> Your Liked Songs
+                </h2>
+                <div class="songs-list" id="favorites-list">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+    </div>
+    </main>
     </div>
 
     <!-- Music Player -->
@@ -144,14 +224,7 @@
                 <span class="time" id="current-time">0:00</span>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress-fill"></div>
-                    <input 
-                        type="range" 
-                        id="progress-slider" 
-                        class="progress-slider" 
-                        min="0" 
-                        max="100" 
-                        value="0"
-                    >
+                    <input type="range" id="progress-slider" class="progress-slider" min="0" max="100" value="0">
                 </div>
                 <span class="time" id="duration">0:00</span>
             </div>
@@ -163,14 +236,7 @@
                 <button class="player-btn" id="volume-btn" title="Volume">
                     <i class="fas fa-volume-up"></i>
                 </button>
-                <input 
-                    type="range" 
-                    id="volume-slider" 
-                    class="volume-slider" 
-                    min="0" 
-                    max="100" 
-                    value="70"
-                >
+                <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="70">
             </div>
         </div>
     </div>
@@ -180,4 +246,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
