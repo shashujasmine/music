@@ -110,6 +110,16 @@ const songs = [
         genre: "Soft Love Ballad",
         play: "1.5M"
     },
+    {
+        title: "Pathikichu",
+        artist: "Anirudh Ravichander, Yogi Sekar, Amogh Balaji",
+        src: "music/Pathikichu.mp3",
+        image: "https://img.youtube.com/vi/Wtq3RRORVx4/0.jpg",
+        duration: "3:32",
+        durationSeconds: 212,
+        genre: "Motivation",
+        play: "10M"
+    },
 
 ];
 
