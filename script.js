@@ -1,18 +1,28 @@
 
 const songs = [
-    { 
-        title: "Aaya Sher", 
-        artist: "Anirudh Ravichander", 
+    {
+        title: "Aaya Sher",
+        artist: "Anirudh Ravichander",
         src: "music/aaya-sher.m4a",
-        image: "https://i.scdn.co/image/ab67616d00001e0248be563b0c9f1d7985a7c608", // Lion cover from Spotify
+        image: "https://i.scdn.co/image/ab67616d00001e0248be563b0c9f1d7985a7c608",
         duration: "3:15",
         durationSeconds: 195,
         genre: "Energetic",
         plays: "1.2M"
     },
-    { 
-        title: "Ava Enna", 
-        artist: "Harris Jayaraj", 
+    {
+        title: "A way Back",
+        artist: "GV.prakash kumar",
+        src: "music/Asuran-way back.mp3",
+        image: "https://a10.gaanacdn.com/gn_img/albums/qaLKY623pO/aLKYxYN2bp/size_m_1774622935.jpg",
+        duration: "1:41",
+        durationSeconds: 101,
+        genre: "Sad",
+        plays: "2M"
+    },
+    {
+        title: "Ava Enna",
+        artist: "Harris Jayaraj",
         src: "music/Ava Enna.mp3",
         image: "https://c.saavncdn.com/029/Vaaranam-Aayiram-2008-500x500.jpg",
         duration: "5:18",
@@ -20,9 +30,9 @@ const songs = [
         genre: "Melody",
         plays: "25M"
     },
-    { 
-        title: "Dheera Dheera", 
-        artist: "Ravi Basrur", 
+    {
+        title: "Dheera Dheera",
+        artist: "Ravi Basrur",
         src: "music/Dheera Dheera.mp3",
         image: "https://pendujatt.com.se/uploads/album/kgf-chapter-1-malayalam-ravi-basrur.webp",
         duration: "3:52",
@@ -30,9 +40,9 @@ const songs = [
         genre: "Epic",
         plays: "150M"
     },
-    { 
-        title: "Shape of You", 
-        artist: "Ed Sheeran", 
+    {
+        title: "Shape of You",
+        artist: "Ed Sheeran",
         src: "music/Shape of You.mp3",
         image: "https://wallpapercave.com/wp/wp3537465.jpg",
         duration: "3:53",
@@ -40,56 +50,67 @@ const songs = [
         genre: "Pop",
         plays: "3.4B"
     },
-    { 
-        title: "Arabic Kuthu (Halamithi Habibo)", 
-        artist: "Anirudh Ravichander & Jonita Gandhi", 
-        src: "music/song1.mp3",
-        image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&h=200&fit=crop", // Party Dance
-        duration: "4:40",
-        durationSeconds: 280,
-        genre: "Kuthu",
-        plays: "450M"
+    {
+        title: "X-COOL(SLOWED)!",
+        artist: "tienanh109, HDN, MC K3",
+        src: "music/X-COOL! (SLOWED).mp3",
+        image: "https://www.mustangspecs.com/wp-content/uploads/2020/09/LfF7hO.jpg",
+        duration: "1:56",
+        durationSeconds: 116,
+        genre: "Phonk",
+        plays: "15M"
     },
-    { 
-        title: "Vaathi Coming", 
-        artist: "Anirudh Ravichander", 
-        src: "music/song2.mp3",
-        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=200&h=200&fit=crop", // Dancing Crowd
-        duration: "3:48",
-        durationSeconds: 228,
-        genre: "Dance",
-        plays: "320M"
+    {
+        title: "Yamma Yamma",
+        artist: "Harris Jayaraj && SPB",
+        src: "music/yamma yamma.mp3",
+        image: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/7aum_Arivu_(soundtrack).jpg/250px-7aum_Arivu_(soundtrack).jpg",
+        duration: "5:20",
+        durationSeconds: 320,
+        genre: "Break-up",
+        play: "224M"
     },
-    { 
-        title: "Hukum - Thalaivar Alappara", 
-        artist: "Anirudh Ravichander", 
-        src: "music/song3.mp3",
-        image: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200&h=200&fit=crop", // Audio setup
-        duration: "3:27",
-        durationSeconds: 207,
-        genre: "Mass",
-        plays: "180M"
+    {
+        title: "Adiye",
+        artist: "G.V.Prakash Kumar",
+        src: "music/Adiye.mp3",
+        image: "https://i.pinimg.com/originals/c7/90/d2/c790d23f8b239b04cf82c25b84e10328.jpg",
+        duration: "4:37",
+        durationSeconds: 277,
+        genre: "Romantic Melody",
+        play: "5M"
     },
-    { 
-        title: "Naan Ready (From Leo)", 
-        artist: "Anirudh Ravichander & Thalapathy Vijay", 
-        src: "music/song4.mp3",
-        image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=200&h=200&fit=crop", // Stadium
-        duration: "4:07",
-        durationSeconds: 247,
-        genre: "Kuthu",
-        plays: "210M"
+    {
+        title: "Kannalanae",
+        artist: "K.S. Chithra",
+        src: "music/Kannalanae.mp3",
+        image: "https://indianfilmhistory.com/admin_panel_new_dev/media1/files_i/1605864977263e44cbjuqmo.jpeg",
+        duration: "6:01",
+        durationSeconds: 361,
+        genre: "Romantic Melody",
+        plays: "4M"
     },
-    { 
-        title: "Blinding Lights", 
-        artist: "The Weeknd", 
-        src: "music/blinding-lights.mp3",
-        image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=200&h=200&fit=crop", // Neon Lights
-        duration: "3:20",
-        durationSeconds: 200,
-        genre: "Synthwave",
-        plays: "4.1B"
-    }
+    {
+        title: "Poongatrile",
+        artist: "Unni Menon and Swarnalatha",
+        src: "music/Poongatrile.mp3",
+        image: "https://a10.gaanacdn.com/gn_img/albums/lJvKa56KDV/vKa198rnKD/size_m.webp",
+        duration: "5:37",
+        durationSeconds: 337,
+        genre: "Sad Love Ballad",
+        play: "55M"
+    },
+    {
+        title: "Munbe Vaa",
+        artist: "Shreya Ghoshal and Naresh Iyer",
+        src: "music/Sillunu Oru kadhal.mp3",
+        image: "https://i.pinimg.com/videos/thumbnails/originals/22/22/5a/22225a8335c4aaabf7e0ef329fc35d3b.0000000.jpg",
+        duration: "5:55",
+        durationSeconds: 355,
+        genre: "Soft Love Ballad",
+        play: "1.5M"
+    },
+
 ];
 
 const SONGS_DATA = songs.map((song, index) => ({
@@ -140,7 +161,7 @@ const favoritesList = document.getElementById('favorites-list');
 let currentSongIndex = 0;
 let isPlaying = false;
 let isShuffle = false;
-let repeatMode = 0; 
+let repeatMode = 0;
 let likedSongs = new Set(JSON.parse(localStorage.getItem('likedSongs')) || []);
 let currentPlaylist = SONGS_DATA;
 
@@ -165,17 +186,17 @@ function setupEventListeners() {
     shuffleBtn.addEventListener('click', toggleShuffle);
     repeatBtn.addEventListener('click', toggleRepeat);
     likeBtn.addEventListener('click', toggleLike);
-    
+
     audioPlayer.addEventListener('timeupdate', updateProgress);
     audioPlayer.addEventListener('ended', handleSongEnd);
     audioPlayer.addEventListener('error', handleAudioError);
-    
+
     progressSlider.addEventListener('input', seekAudio);
     volumeSlider.addEventListener('input', adjustVolume);
-    
+
     searchInput.addEventListener('input', handleSearch);
     clearSearchBtn.addEventListener('click', clearSearch);
-    
+
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -199,12 +220,12 @@ function handleAudioError() {
 function handleNavigation(target) {
     navLinks.forEach(link => link.classList.remove('active'));
     document.querySelector(`a[href="${target}"]`).classList.add('active');
-    
+
     searchResultsSection.style.display = 'none';
     favoriteSection.style.display = 'none';
     document.getElementById('hero-section').style.display = 'grid';
     document.getElementById('recommended-section').style.display = 'block';
-    
+
     if (target === '#search') {
         pageTitle.textContent = 'Search Music';
         searchInput.focus();
@@ -225,7 +246,7 @@ function handleNavigation(target) {
 
 function handleSearch(e) {
     const query = e.target.value.toLowerCase().trim();
-    
+
     if (query.length === 0) {
         clearSearchBtn.style.display = 'none';
         searchResultsSection.style.display = 'none';
@@ -233,17 +254,17 @@ function handleSearch(e) {
         document.getElementById('recommended-section').style.display = 'block';
         return;
     }
-    
+
     clearSearchBtn.style.display = 'block';
     document.getElementById('hero-section').style.display = 'none';
     document.getElementById('recommended-section').style.display = 'none';
-    
-    const results = SONGS_DATA.filter(song => 
+
+    const results = SONGS_DATA.filter(song =>
         song.name.toLowerCase().includes(query) ||
         song.artist.toLowerCase().includes(query) ||
         song.genre.toLowerCase().includes(query)
     );
-    
+
     renderSearchResults(results);
     searchResultsSection.style.display = 'block';
 }
@@ -274,7 +295,7 @@ function renderSearchResults(results) {
         `;
         return;
     }
-    
+
     searchResultsContainer.innerHTML = results.map(song => `
         <div class="search-result-item" onclick="loadSong(${song.id}); togglePlay();">
             <img src="${song.image}" alt="${song.name}" class="search-result-image">
@@ -294,7 +315,7 @@ function renderFavorites() {
         `;
         return;
     }
-    
+
     const favoriteSongs = SONGS_DATA.filter(song => likedSongs.has(song.id));
     favoritesList.innerHTML = favoriteSongs.map(song => createSongElement(song)).join('');
     attachSongEventListeners();
@@ -302,10 +323,10 @@ function renderFavorites() {
 
 function createSongElement(song) {
     const isLiked = likedSongs.has(song.id);
-    const isPlaying = currentSongIndex === SONGS_DATA.findIndex(s => s.id === song.id) && isPlaying;
-    
+    const isCurrentPlaying = currentSongIndex === SONGS_DATA.findIndex(s => s.id === song.id) && isPlaying;
+
     return `
-        <div class="song-item ${isPlaying ? 'playing' : ''}" data-song-id="${song.id}">
+        <div class="song-item ${isCurrentPlaying ? 'playing' : ''}" data-song-id="${song.id}">
             <img src="${song.image}" alt="${song.name}" class="song-thumbnail">
             <div class="song-info">
                 <div class="song-name">${song.name}</div>
@@ -329,7 +350,7 @@ function attachSongEventListeners() {
             }
         });
     });
-    
+
     document.querySelectorAll('.song-like-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -344,13 +365,13 @@ function togglePlay() {
     if (audioPlayer.src === '') {
         loadSong(SONGS_DATA[0].id);
     }
-    
+
     if (isPlaying) {
         audioPlayer.pause();
     } else {
         audioPlayer.play();
     }
-    
+
     isPlaying = !isPlaying;
     updatePlayButton();
 }
@@ -361,7 +382,7 @@ function playNext() {
     } else {
         currentSongIndex = (currentSongIndex + 1) % SONGS_DATA.length;
     }
-    
+
     loadSong(SONGS_DATA[currentSongIndex].id);
     if (isPlaying) audioPlayer.play();
 }
@@ -380,7 +401,7 @@ function toggleShuffle() {
 function toggleRepeat() {
     repeatMode = (repeatMode + 1) % 3;
     repeatBtn.classList.toggle('active', repeatMode > 0);
-    
+
     if (repeatMode === 0) {
         repeatBtn.innerHTML = '<i class="fas fa-redo"></i>';
     } else if (repeatMode === 1) {
@@ -404,7 +425,7 @@ function toggleLikeSong(songId, element) {
         element.classList.add('liked');
         element.innerHTML = '<i class="fas fa-heart"></i>';
     }
-    
+
     localStorage.setItem('likedSongs', JSON.stringify(Array.from(likedSongs)));
     updateAllSongElements();
 }
@@ -412,19 +433,19 @@ function toggleLikeSong(songId, element) {
 function loadSong(songId) {
     const song = SONGS_DATA.find(s => s.id === songId);
     currentSongIndex = SONGS_DATA.indexOf(song);
-    
+
     audioPlayer.src = song.src;
     playerSongName.textContent = song.name;
     playerArtistName.textContent = song.artist;
     playerAlbumImg.src = song.image;
     durationEl.textContent = song.duration;
-    
+
     progressSlider.max = song.durationSeconds;
-    
+
     const isLiked = likedSongs.has(songId);
     likeBtn.classList.toggle('liked', isLiked);
     likeBtn.innerHTML = `<i class="fa${isLiked ? 's' : 'r'} fa-heart"></i>`;
-    
+
     updateAllSongElements();
 }
 
@@ -449,23 +470,23 @@ function seekAudio(e) {
 function adjustVolume(e) {
     const volume = e.target.value / 100;
     audioPlayer.volume = volume;
-    
+
     const percentage = e.target.value;
     volumeSlider.style.setProperty('--volume', percentage + '%');
 }
 
 function updateProgress() {
     const { currentTime, duration } = audioPlayer;
-    
+
     progressSlider.value = currentTime;
     progressFill.style.width = (currentTime / duration) * 100 + '%';
-    
+
     currentTimeEl.textContent = formatTime(currentTime);
 }
 
 function formatTime(seconds) {
     if (isNaN(seconds)) return '0:00';
-    
+
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
     return `${mins}:${secs.toString().padStart(2, '0')}`;
@@ -491,9 +512,9 @@ function updateAllSongElements() {
     document.querySelectorAll('.song-item').forEach(item => {
         const songId = parseInt(item.getAttribute('data-song-id'));
         const isCurrentPlaying = currentSongIndex === SONGS_DATA.findIndex(s => s.id === songId) && isPlaying;
-        
+
         item.classList.toggle('playing', isCurrentPlaying);
-        
+
         const likeBtn = item.querySelector('.song-like-btn');
         const isLiked = likedSongs.has(songId);
         likeBtn.classList.toggle('liked', isLiked);
