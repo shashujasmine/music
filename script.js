@@ -200,7 +200,76 @@ const songs = [
         genre: "Philosophical Melody",
         play: "28M"
     },
-
+    {
+        title: "Pachamala Poovu",
+        artist: "Illaiyaraja",
+        src: "music/Pachamala Poovu.mp3",
+        image: "https://c.saavncdn.com/043/Kizhakku-Vaasal-Tamil-1990-20230407022420-500x500.jpg",
+        duration: "4:13",
+        durationSeconds: 253,
+        genre: "Folk Melody",
+        play: "10M"
+    },
+    {
+        title: "Pottu Vaitha oru vatta nila",
+        artist: "Illaiyaraja",
+        src: "music/Pottu Vaithavatta Nila.mp3",
+        image: "https://cdn.filmistreet.com/wp-content/uploads/2015/02/Idhayam.gif",
+        duration: "4:28",
+        durationSeconds: 268,
+        genre: "Classic Romantic",
+        play: "21M"
+    },
+    {
+        title: "Rasathi Unna",
+        artist: "Illaiyaraja",
+        src: "music/Rasathi Unna.mp3",
+        image: "https://lyricsila.com/wp-content/uploads/Rasathi-Unna-Kanatha-Nenju-Lyrics-Vaidehi-Kathirunthal-300x171.jpg",
+        duration: "4:24",
+        durationSeconds: 264,
+        genre: "Emotional",
+        play: "11M"
+    },
+    {
+        title: "Sara sara saara Kaathu",
+        artist: "Ghibran",
+        src: "music/Sara Sara Saara Kathu.mp3",
+        image: "https://c.saavncdn.com/847/Vaagai-Sooda-Vaa-Original-Motion-Picture-Soundtrack-Tamil-2011-20250910162237-500x500.jpg",
+        duration: "5:09",
+        durationSeconds: 309,
+        genre: "Folk Melody",
+        play: "2M"
+    },
+    {
+        title: "Un Paarvaiyil",
+        artist: "Karthik and Sumangali",
+        src: "music/Un Paarvaiyil.mp3",
+        image: "https://i.ytimg.com/vi/EmEpTg_cbBQ/maxresdefault.jpg",
+        duration: "6:13",
+        durationSeconds: 373,
+        genre: "Romantic Melody",
+        play: "15M"
+    },
+    {
+        title: "Unna Vida",
+        artist: "Kamal Haasan, Shreya Ghoshal",
+        src: "music/Unna Vida.mp3",
+        image: "https://c.saavncdn.com/004/Virumandi-Tamil-2004-20201104150110-500x500.jpg",
+        duration: "6:12",
+        durationSeconds: 372,
+        genre: "Romantic Melody",
+        play: "1M"
+    },
+    {
+        title: "Kanpesum Varthaigal",
+        artist: "Yuvan Shankar Raja",
+        src: "music/Kanpesum Varthaigal.mp3",
+        image: "https://c.saavncdn.com/398/7-G-Rainbow-Colony-Tamil-2004-20250214131553-500x500.jpg",
+        duration: "4:41",
+        durationSeconds: 281,
+        genre: "Emotional Classic",
+        play: "50M"
+    },
 
 ];
 
