@@ -120,6 +120,87 @@ const songs = [
         genre: "Motivation",
         play: "10M"
     },
+    {
+        title: "Aathangarai Marame",
+        artist: "Mano and Sujatha Mohan",
+        src: "music/Aathangarai Marame.mp3",
+        image: "https://c.saavncdn.com/471/Kizhakku-Cheemayile-Tamil-1993-20250224193420-500x500.jpg",
+        duration: "4:38",
+        durationSeconds: 278,
+        genre: "Melody",
+        play: "5M"
+    },
+    {
+        title: "Annul Maelae",
+        artist: "Sudha Raghunathan",
+        src: "music/Annul Maelae.mp3",
+        image: "https://c.saavncdn.com/635/Vaaranam-Aayiram-Tamil-2008-20190629141128-500x500.jpg",
+        duration: "5:11",
+        durationSeconds: 311,
+        genre: "Romantic Melody",
+        play: "1M"
+    },
+    {
+        title: "Anthimaalai neram",
+        artist: "Sis Sriram",
+        src: "music/Anthimaalai Neram.mp3",
+        image: "https://pendujatt.com.se/uploads/album/monster-justin-prabhakaran.webp",
+        duration: "3:31",
+        durationSeconds: 211,
+        genre: "Romantic Melody",
+        play: "2M"
+    },
+    {
+        title: "Elangaathu Veesudhey",
+        artist: "Ilaiyaraaja && Sriram Parthasarathy",
+        src: "music/Elangaathu Veesudhey.mp3",
+        image: "https://c.saavncdn.com/790/Pithamagan-Tamil-2003-20250908204442-500x500.jpg",
+        duration: "6:10",
+        durationSeconds: 370,
+        genre: "Folk Melody",
+        play: "30M"
+    },
+    {
+        title: "Enkeyoo Partha",
+        artist: "Yuvan Shankar Raja , Udit Narayan and Shreya Ghoshal",
+        src: "music/Enkeyoo Partha.mp3",
+        image: "https://i.ytimg.com/vi/JLWQ_mMGXI0/mqdefault.jpg",
+        duration: "5:03",
+        durationSeconds: 303,
+        genre: "Romantic Melody",
+        play: "50M"
+    },
+    {
+        title: "Mundhinam",
+        artist: "Harris Jayaraj ",
+        src: "music/Mundhinam.mp3",
+        image: "https://c.saavncdn.com/635/Vaaranam-Aayiram-Tamil-2008-20190629141128-500x500.jpg",
+        duration: "5:09",
+        durationSeconds: 309,
+        genre: "Romantic Melody",
+        play: "2M"
+    },
+    {
+        title: "Nenjangootil Neeye",
+        artist: "Vijay Antony , Jayadev and Rajalakshmy",
+        src: "music/Nenjangootil Neeye.mp3",
+        image: "https://c.saavncdn.com/791/Dishyum-Tamil-2006-20171219-500x500.jpg",
+        duration: "4:38",
+        durationSeconds: 278,
+        genre: "Romantic Melody",
+        play: "5M"
+    },
+    {
+        title: "oru Naalil",
+        artist: "Yuvan Shankar Raja",
+        src: "music/Oru Naalil.mp3",
+        image: "https://c.saavncdn.com/771/Pudhupettai-Tamil-2005-20230720205106-500x500.jpg",
+        duration: "6:33",
+        durationSeconds: 393,
+        genre: "Philosophical Melody",
+        play: "28M"
+    },
+
 
 ];
 
