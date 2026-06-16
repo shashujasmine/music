@@ -270,6 +270,16 @@ const songs = [
         genre: "Emotional Classic",
         play: "50M"
     },
+    {
+        title: "Un Paarvaiyil",
+        artist: "Ilaiyaraaja",
+        src: "music/Un Paarvayil.mp3",
+        image: "https://wallpaperaccess.com/full/6049260.jpg",
+        duration: "4:13",
+        durationSeconds: 253,
+        genre: "Romantic Melody",
+        play: "10M"
+    },
 
 ];
 
