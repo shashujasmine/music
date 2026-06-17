@@ -280,6 +280,86 @@ const songs = [
         genre: "Romantic Melody",
         play: "10M"
     },
+    {
+        title: "Iruvathu Kodi",
+        artist: "Hariharan",
+        src: "music/Iruvathu Kodi.mp3",
+        image: "https://pagallworlds.com/wp-content/uploads/2025/10/Iruvathu-Kodi-Video-Song-Thullatha-Manamum-Thullum-Vijay-Simran-Sun-Music-mq.jpg",
+        duration: "4:48",
+        durationSeconds: 288,
+        genre: "Romantic Melody",
+        play: "11M"
+    },
+    {
+        title: "Valaiyosai",
+        artist: "Ilaiyaraaja && SPB",
+        src: "music/valaiyosai.mp3",
+        image: "https://i.ytimg.com/vi/N15ET23CpLQ/maxresdefault.jpg",
+        duration: "4:23",
+        durationSeconds: 263,
+        genre: "Romantic Melody",
+        play: "57M"
+    },
+    {
+        title: "Vellai Pura Ondru",
+        artist: "Ilaiyaraaja && SPB",
+        src: "music/Vellai Pura Ondru.mp3",
+        image: "https://i.ytimg.com/vi/-tOIbjweKvQ/maxresdefault.jpg",
+        duration: "4:21",
+        durationSeconds: 261,
+        genre: "Melody",
+        play: "1M"
+    },
+    {
+        title: "Vennira Iravugal",
+        artist: "Yuvan Shankar Raja",
+        src: "music/Vennira Iravugal.mp3",
+        image: "https://i.ytimg.com/vi/sI0acML5fe0/maxresdefault.jpg",
+        duration: "4:44",
+        durationSeconds: 284,
+        genre: "Romantic Melody",
+        play: "52M"
+    },
+    {
+        title: "Vizhiyil vizhunthu",
+        artist: "Ilaiyaraaja && S. P. Balasubrahmanyam",
+        src: "music/Vizhiyil vizhunthu.mp3",
+        image: "https://wallpaperaccess.com/full/4725713.jpg",
+        duration: "4:16",
+        durationSeconds: 256,
+        genre: "Romantic Melody",
+        play: "29M"
+    },
+    {
+        title: "Kanne Kalaimaane",
+        artist: "Ilaiyaraaja",
+        src: "music/Kanne Kalaimaane.mp3",
+        image: "https://c.saavncdn.com/353/Moondram-Pirai-Original-Motion-Picture-Soundtrack--Tamil-1982-20220124155323-500x500.jpg",
+        duration: "4:12",
+        durationSeconds: 252,
+        genre: "Melody",
+        play: "11M"
+    },
+    {
+        title: "Kan Irandil",
+        artist: "Vijay Antony",
+        src: "music/Kan Irandil.mp3",
+        image: "https://c.saavncdn.com/410/Uthama-Puthiran-Original-Motion-Picture-Soundtrack-Tamil-2010-20250910155844-500x500.jpg",
+        duration: "4:31",
+        durationSeconds: 271,
+        genre: "Romantic Melody",
+        play: "2M"
+    },
+    {
+        title: "Kaththi theme",
+        artist: "Anirudh Ravichander",
+        src: "music/Kaththi Theme.mp3",
+        image: "https://images.openai.com/static-rsc-4/gxUboawfLLqTU9Ra8nmS8HWvW_dNZnFkhCqw-0jEAHrL-UDXryGo1OkyPMBCxKoLxuiDeIZpDhtQnN1HuqO_awQESJh1bzD4OvCpZQBgp-Yr_u5Nx1eBDNQFBjqJHD4KLj7lXiTMjZJE5gc7sOfP7UczCU1RSVDNtzt0ZgUt040?purpose=inline",
+        duration: "1:03",
+        durationSeconds: 63,
+        genre: "BGM",
+        play: "25M"
+    },
 
 ];
 
