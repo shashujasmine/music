@@ -360,6 +360,67 @@ const songs = [
         genre: "BGM",
         play: "25M"
     },
+    {
+        title: "Nee Kavithaigala",
+        artist: "Pradeep Kumar && Dhibu Ninan Thomas",
+        src: "music/Nee Kavithaigala.mp3",
+        image: "https://images.openai.com/static-rsc-4/Vdg22uxkzoht-pdBIq8dKjtUUM5uJxiya3iMz4RNGiLR-wPUDKMAES1dBruqwpGR5pNPq5K-kLFfDW2FHnrFjyvp4p_j-S-4oBcrSQOt6OPgPFajUqspTkeS2raWZi76OIeRL7mHorJMQ98fpx0LDEURrg1bgtEnxOzHulJEvzw?purpose=inline",
+        duration: "4:36",
+        durationSeconds: 276,
+        genre: "Romantic Melody",
+        play: "17M"
+    },
+    {
+        title: "Thendral Vanthu",
+        artist: "Ilaiyaraaja",
+        src: "music/Thendral Vandhu.mp3",
+        image: "https://images.openai.com/static-rsc-4/PGL2JKUvE88Z98EErFLHnO3-Ubr6seDgxNNKHVThKDgwqX_mHYIMH52o7IBavYI9XWarU4Y7hMZnsSei4LD4CzgVY5UgcasOWFLpMCGSrRi2SEPyH9qUCH1UmppofdAcnm8czczixCvgd0B-758KEYd6eNyIGa8sLceGHxrtypg?purpose=inline",
+        duration: "5:15",
+        durationSeconds: 315,
+        genre: "Romantic Melody",
+        play: "57M"
+    },
+    {
+        title: "Why this kolaveri",
+        artist: "Dhanush",
+        src: "music/Why This Kolaveri Di.mp3",
+        image: "https://images.openai.com/static-rsc-4/4HM1mDBi7KCEjv0f9D_FdN3zEeoA-andVsGiFzcdrp4tF2ARxfonGGL86Vy9c4qYx64RKNYOquroC6mI61k08F_BDbxLpL_M-ervhUvibF77XexaMKxwEa7pqK_lq5fPfEPLtywuXusneYoh8OTecesGB71ARI4BW7TAGyamPdE?purpose=inline",
+        duration: "4:19",
+        durationSeconds: 259,
+        genre: "Breakup , pop , soup song",
+        play: "86M"
+    },
+    {
+        title: "Chammak Challo",
+        artist: "Akon, Hamsika Iyer",
+        src: "music/Chammak Challo.mp3",
+        image: "https://images.openai.com/static-rsc-4/wI9hzwknjt0DUphBswtbBIFZ55PKm30XPX20YXgf2cz0RiRrfbO4V8tqZ-sqpliFEzwGlYyUdOy3Dk-_CF33VNOAg8lXeZqaSuS5K3OIhKL_pLXKQw9smJrs8UDWcjJ7eEP5bUNhVKOlXHIXLSoUpbjibsXR1RstIjqCAB5SHIdabbe7gDXg1ZsS6aksQc0p?purpose=fullsize",
+        duration: "3:47",
+        durationSeconds: 227,
+        genre: "Dance Pop",
+        play: "100M"
+    },
+    {
+        title: "Minnalvala",
+        artist: "Sid Sriram, Sithara Krishnakumar",
+        src: "music/Minnalvala.mp3",
+        image: "https://images.openai.com/static-rsc-4/kS1ZN-n-dq0FerBmvqPpe4vdGh2o6Tvw8mZyGmU58GprLJLztu4oo85luSiWvYjL9-Fcss-z9EkoRR5CB1vY2xvZt-Fo7Swv2LLygQr8Tcye6VZFoOmt6HGBjJBAfExRTP903MkEiIJofqqjW82N-dPlGe7Qu-X0Iz0qVD93Pl0?purpose=inline",
+        duration: "5:59",
+        durationSeconds: 359,
+        genre: "Romantic Melody",
+        play: "77M"
+    },
+    {
+        title: "Thuli Thuli",
+        artist: "Yuvan Shankar Raja",
+        src: "music/Thuli Thuli.mp3",
+        image: "https://yt3.googleusercontent.com/t4Ua-J4dq7I9FQ8PtcoLECOm6jh6ub__KPdA0dijcBKgdcfvS3-hRp2B6OlZDaQCFiXi5sQ42Y9oYy9vHQ=w544-h544-l90-rj",
+        duration: "4:29",
+        durationSeconds: 269,
+        genre: "Romantic Melody",
+        play: "7M"
+    },
+
 
 ];
 

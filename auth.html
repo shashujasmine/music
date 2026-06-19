@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrooveHub Sign In</title>
+    <meta name="description" content="Sign in or create your GrooveHub account to enjoy unlimited music streaming.">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Animated background orbs -->
+    <div class="bg-anim">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="auth-wrapper">
+
+
+
+        <!-- Glass card -->
+        <div class="auth-card">
+
+            <!-- Tab switcher -->
+            <div class="auth-tabs" role="tablist">
+                <button class="tab-btn active" id="tab-login" onclick="switchTab('login')" role="tab"
+                    aria-selected="true">
+                    Sign In
+                </button>
+                <button class="tab-btn" id="tab-signup" onclick="switchTab('signup')" role="tab" aria-selected="false">
+                    Create Account
+                </button>
+            </div>
+
+            <!-- Alert box -->
+            <div class="auth-alert" id="auth-alert" role="alert">
+                <i class="fas fa-circle-exclamation"></i>
+                <span id="alert-text"></span>
+            </div>
+
+            <!-- ===== LOGIN FORM ===== -->
+            <div class="form-panel active" id="panel-login">
+                <form id="login-form" novalidate autocomplete="on">
+
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <div class="input-wrap">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="login-email" class="form-input" placeholder="you@example.com"
+                                autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <div class="input-wrap">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="login-password" class="form-input"
+                                placeholder="Enter your password" autocomplete="current-password" required>
+                            <button type="button" class="toggle-pw" onclick="togglePassword('login-password', this)"
+                                aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-extras">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="remember-me">
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-link" onclick="showForgot(event)">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="auth-btn" id="login-btn">
+                        <span class="btn-spinner" id="login-spinner"></span>
+                        <i class="fas fa-sign-in-alt" id="login-icon"></i>
+                        <span id="login-text">Sign In</span>
+                    </button>
+
+                </form>
+
+                <div class="divider">or continue with</div>
+
+                <!--<button class="social-btn" onclick="googleSignIn()">
+                    <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google">
+                    Continue with Google
+                </button>-->
+
+                <div class="auth-footer">
+                    Don't have an account?
+                    <a class="switch-link" onclick="switchTab('signup')">Create one free</a>
+                </div>
+            </div>
+
+
+            <div class="form-panel" id="panel-signup">
+                <form id="signup-form" novalidate autocomplete="on">
+
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <div class="input-wrap">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="signup-name" class="form-input" placeholder="Your name"
+                                autocomplete="name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <div class="input-wrap">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="signup-email" class="form-input" placeholder="you@example.com"
+                                autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <div class="input-wrap">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="signup-password" class="form-input"
+                                placeholder="Create a strong password" autocomplete="new-password" required
+                                oninput="checkStrength(this.value)">
+                            <button type="button" class="toggle-pw" onclick="togglePassword('signup-password', this)"
+                                aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="pw-strength" id="pw-strength">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strength-fill"></div>
+                            </div>
+                            <span class="strength-text" id="strength-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-confirm">Confirm Password</label>
+                        <div class="input-wrap">
+                            <i class="fas fa-shield-alt"></i>
+                            <input type="password" id="signup-confirm" class="form-input"
+                                placeholder="Re-enter your password" autocomplete="new-password" required>
+                            <button type="button" class="toggle-pw" onclick="togglePassword('signup-confirm', this)"
+                                aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="auth-btn" id="signup-btn">
+                        <span class="btn-spinner" id="signup-spinner"></span>
+                        <i class="fas fa-user-plus" id="signup-icon"></i>
+                        <span id="signup-text">Create Account</span>
+                    </button>
+
+                </form>
+
+                <div class="auth-footer">
+                    Already have an account?
+                    <a class="switch-link" onclick="switchTab('login')">Sign in</a>
+                </div>
+            </div>
+
+        </div><!-- /auth-card -->
+    </div><!-- /auth-wrapper -->
+
+    <script src="auth.js"></script>
+</body>
+
+</html>

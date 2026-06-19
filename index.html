@@ -5,8 +5,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GrooveHub - Modern Music Streaming</title>
+
+    <!-- ── Flash-prevention auth guard (runs before page renders) ── -->
+    <script>
+        (function () {
+            try {
+                var session = JSON.parse(localStorage.getItem('groovehub_session') || 'null');
+                if (!session) {
+                    document.documentElement.style.visibility = 'hidden';
+                    window.location.replace('auth.html');
+                }
+                // If "remember me" was off, also check sessionStorage
+                if (session && !session.remember) {
+                    var ss = sessionStorage.getItem('groovehub_session');
+                    if (!ss) {
+                        localStorage.removeItem('groovehub_session');
+                        document.documentElement.style.visibility = 'hidden';
+                        window.location.replace('auth.html');
+                    }
+                }
+            } catch (e) {
+                window.location.replace('auth.html');
+            }
+        })();
+    </script>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ── User chip & dropdown ── */
+        .user-profile {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        .user-chip {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(34,198,99,0.10);
+            border: 1px solid rgba(34,198,99,0.25);
+            border-radius: 40px;
+            padding: 6px 14px 6px 6px;
+            transition: background 0.2s;
+        }
+        .user-chip:hover { background: rgba(34,198,99,0.18); }
+        .user-avatar {
+            width: 34px; height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #22c663, #17a550);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 14px; color: #000;
+            flex-shrink: 0;
+        }
+        .user-name-chip {
+            font-size: 13px; font-weight: 600;
+            color: #e8e8f0;
+            max-width: 110px;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .user-dropdown {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            background: rgba(15,15,25,0.95);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 12px;
+            padding: 6px;
+            min-width: 170px;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+            display: none;
+            z-index: 1000;
+            animation: ddFade 0.18s ease;
+        }
+        @keyframes ddFade {
+            from { opacity:0; transform: translateY(-6px); }
+            to   { opacity:1; transform: translateY(0); }
+        }
+        .user-dropdown.open { display: block; }
+        .dd-header {
+            padding: 10px 12px 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 4px;
+        }
+        .dd-header .dd-name { font-size: 13px; font-weight: 700; color: #e8e8f0; }
+        .dd-header .dd-email { font-size: 11px; color: #8888a8; margin-top: 2px; }
+        .dd-item {
+            display: flex; align-items: center; gap: 10px;
+            padding: 9px 12px;
+            border-radius: 8px;
+            font-size: 13px; font-weight: 500; color: #e8e8f0;
+            cursor: pointer;
+            transition: background 0.15s;
+            border: none; background: none; width: 100%; text-align: left;
+            font-family: inherit;
+        }
+        .dd-item:hover { background: rgba(255,255,255,0.07); }
+        .dd-item.logout { color: #ff5566; }
+        .dd-item.logout:hover { background: rgba(255,85,102,0.10); }
+        .dd-item i { width: 16px; text-align: center; }
+        /* sidebar sign-out btn */
+        .sidebar-signout {
+            display: flex; align-items: center; gap: 8px;
+            width: 100%; background: rgba(255,85,102,0.10);
+            border: 1px solid rgba(255,85,102,0.20);
+            border-radius: 10px;
+            color: #ff5566;
+            font-size: 13px; font-weight: 600;
+            padding: 9px 14px;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: background 0.2s;
+            font-family: inherit;
+        }
+        .sidebar-signout:hover { background: rgba(255,85,102,0.20); }
+    </style>
 </head>
 
 <body>
@@ -44,6 +160,9 @@
 
             <div class="sidebar-footer">
                 <p>2026 MusicHub</p>
+                <button class="sidebar-signout" onclick="logoutUser()">
+                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                </button>
             </div>
         </aside>
 
@@ -53,8 +172,21 @@
             <header class="header">
                 <div class="header-top">
                     <h1 id="page-title">Welcome Back</h1>
-                    <div class="user-profile">
-                        <i class="fas fa-user-circle"></i>
+                    <div class="user-profile" id="user-profile-wrap" onclick="toggleDropdown()">
+                        <div class="user-chip">
+                            <div class="user-avatar" id="user-avatar-initials">?</div>
+                            <span class="user-name-chip" id="user-name-chip">Guest</span>
+                            <i class="fas fa-chevron-down" style="font-size:11px;color:#8888a8;"></i>
+                        </div>
+                        <div class="user-dropdown" id="user-dropdown">
+                            <div class="dd-header">
+                                <div class="dd-name" id="dd-fullname">—</div>
+                                <div class="dd-email" id="dd-email">—</div>
+                            </div>
+                            <button class="dd-item logout" onclick="logoutUser()">
+                                <i class="fas fa-sign-out-alt"></i> Sign Out
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -98,6 +230,28 @@
                         <div class="hero-visual">
                             <img src="https://i.scdn.co/image/ab67616d00001e0248be563b0c9f1d7985a7c608"
                                 alt="Aaya Sher Cover" class="hero-cover">
+                        </div>
+                    </div>
+
+                    <div class="hero-banner featured-card-1">
+                        <div class="hero-content">
+                            <span class="hero-badge"><i class="fas fa-fire"></i>Top Hit</span>
+                            <h1 class="hero-title">Thendral Vanthu</h1>
+                            <p class="hero-artist">Illaiyaraaja</p>
+                            <p class="hero-description">"Thendral Vandhu Theendum Pothu" is one of Ilaiyaraaja's most
+                                loved romantic melodies. The song beautifully compares the emotions of love to
+                                nature—gentle breeze, moonlight, colors, and changing seasons. It creates a calm,
+                                dreamy, and nostalgic atmosphere that resonates deeply with listeners.</p>
+                            <div class="hero-buttons">
+                                <button class="hero-btn play-btn-hero" onclick="loadSong(38); togglePlay();">
+                                    <i class="fas fa-play"></i> Play Now
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="hero-visual">
+                            <img src="https://images.openai.com/static-rsc-4/PGL2JKUvE88Z98EErFLHnO3-Ubr6seDgxNNKHVThKDgwqX_mHYIMH52o7IBavYI9XWarU4Y7hMZnsSei4LD4CzgVY5UgcasOWFLpMCGSrRi2SEPyH9qUCH1UmppofdAcnm8czczixCvgd0B-758KEYd6eNyIGa8sLceGHxrtypg?purpose=inline"
+                                alt="Thendral Vandhu cover" class="hero-cover">
                         </div>
                     </div>
 
@@ -322,7 +476,45 @@
     <!-- Hidden Audio Element -->
     <audio id="audio-player"></audio>
 
+    <script src="auth.js"></script>
     <script src="script.js"></script>
+    <script>
+        // ── Auth guard: redirect if not logged in ──
+        (function () {
+            if (!isLoggedIn()) {
+                window.location.href = 'auth.html';
+            }
+        })();
+
+        // ── Populate user info in header ──
+        (function () {
+            const user = getCurrentUser();
+            if (!user) return;
+
+            // Welcome heading
+            const title = document.getElementById('page-title');
+            if (title) title.textContent = 'Welcome Back, ' + user.name.split(' ')[0] + ' 👋';
+
+            // Avatar initials
+            const initials = user.name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0,2);
+            document.getElementById('user-avatar-initials').textContent = initials;
+            document.getElementById('user-name-chip').textContent       = user.name.split(' ')[0];
+            document.getElementById('dd-fullname').textContent          = user.name;
+            document.getElementById('dd-email').textContent             = user.email;
+        })();
+
+        // ── Dropdown toggle ──
+        function toggleDropdown() {
+            document.getElementById('user-dropdown').classList.toggle('open');
+        }
+
+        // Close dropdown on outside click
+        document.addEventListener('click', function (e) {
+            const wrap = document.getElementById('user-profile-wrap');
+            const dd   = document.getElementById('user-dropdown');
+            if (wrap && !wrap.contains(e.target)) dd.classList.remove('open');
+        });
+    </script>
 </body>
 
 </html>
