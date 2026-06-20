@@ -420,6 +420,36 @@ const songs = [
         genre: "Romantic Melody",
         play: "7M"
     },
+    {
+        title: "Raga of Revenge",
+        artist: "Anirudh Ravichander",
+        src: "music/Raga of Revenge.mp3",
+        image: "https://images.openai.com/static-rsc-4/UGpvRCPcKL_uB5VTTDDhro8X20by3eUSDWIy6KTxA_lTNcVaZ-ROdlfsvd-a56lEG1wnIEwVCxwcm2sfRs40baiJr-ips9gsOvUT2Ph85fJUnBpkY2fZzKDM83hOsjHKTiPxHYKWScraek4H3go22xv17sW77czXacaC952B84A?purpose=inline",
+        duration: "2:11",
+        durationSeconds: 131,
+        genre: "BGM",
+        play: "87M"
+    },
+    {
+        title: "Urike Urike",
+        artist: "Sid Sriram",
+        src: "music/Urike Urike.mp3",
+        image: "https://yt3.googleusercontent.com/fwKC0N9TtY0ZMD_mOEtPMhg786Jt_7ML3osriZjxMoRR8MFV-GsNGOar5slrGuu3KY3pHlVJcaEVft65=w544-h544-l90-rj",
+        duration: "4:50",
+        durationSeconds: 290,
+        genre: "Romance",
+        play: "9.5M"
+    },
+    {
+        title: "Badass",
+        artist: "Anirudh Ravichander",
+        src: "music/Badass.mp3",
+        image: "https://yt3.googleusercontent.com/rhb6EEfG0jcl2zyVOqFRuxBWE1gDtCI8O6tToSurheMbRwsEAZ1YYuNZ5MN80ESWmECNRzY0TF0gw3w5=w544-h544-l90-rj",
+        duration: "3:51",
+        durationSeconds: 231,
+        genre: "Action",
+        play: "56M"
+    },
 
 
 ];
