@@ -2,6 +2,9 @@ Groovehub - Music Streaming Website
 
 groovehub is a modern , spotify-inspired music streaming website built using pure HTML,CSS and JavaScript. It's frontend-only project , so there's no backend setup required-just open and play the music.
 
+NOTE:
+"I used AI for code debugging and project completion."
+
 About:
 This project focuses on creating a smooth and interative music player experience with a clean dark UI . it's designed to feel like a real music app while keeping everything simple and lightweight.
 
